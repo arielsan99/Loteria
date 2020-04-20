@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lotería</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <style>
+    body {
+      font: sans-serif;
+    }
+    button {
+      font-size: 16pt;
+    }
+    #result {
+      font-size: 50pt;
+      width: 60%;
+      float: left;
+    }
+
+    .option {
+      font-size: 18pt;
+      fill: steelblue;
+      font-family: sans-serif;
+    }
+    #drawnBox {
+      width: 40%;
+      float:left;
+
+    }
+    .option.drawn {
+      fill: grey;
+    }
+    .option.selected, .option.selected.drawn {
+      fill: red;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <br>
+  <br>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active">
+      <input type="radio" name="options" id=btnChoose autocomplete="off" checked> BUSCAR
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" onclick="download_csv()" autocomplete="off"> Descargar CSV
+    </label>
+
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Subir archivo</label>
+    <input type="file" class="form-control-file" id="file-input">
+  </div>
+
+  <div>
+    <div id="result"></div>
+    <div id="drawnBox"><h2>Estudiante</h2>
+        <div id="drawn"></div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
